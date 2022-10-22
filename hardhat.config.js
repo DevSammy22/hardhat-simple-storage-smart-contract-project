@@ -18,7 +18,7 @@ module.exports = {
             chainId: 5,
         },
         localhost: {
-            url: "http://127.0.0.1:8545/", //LocalHost is different from Hardhart network
+            url: "http://127.0.0.1:8545/", //LocalHost is different from Hardhart networks
             chainId: 31337,
         },
     },
