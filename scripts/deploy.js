@@ -21,11 +21,12 @@ async function main() {
     //Verifying the contract
     if (network.config.chainId === 5 && process.env.ETHERSCAN_API_KEY) {
         console.log("Waiting for block confirmations...");
-        await simpleStorage.deployTransaction.wait(6);
+        await simpleStorage.deployTransaction.wait(6); //Wait six blocks
         await verify(simpleStorage.address, []);
     }
 
-    //Setting the current value
+    //Interacting with the contract:
+    //Set the current value
     const currentValue = await simpleStorage.retrieve();
     console.log(`Current Value is: ${currentValue}`);
 
@@ -36,7 +37,7 @@ async function main() {
     console.log(`Updated Value is: ${updatedValue}`);
 }
 
-// async verify function verify(contractAddress, args)
+// const verify = async (contractAddress, args) => {
 async function verify(contractAddress, args) {
     console.log("Verifying contract...");
     try {
