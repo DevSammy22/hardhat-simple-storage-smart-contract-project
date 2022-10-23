@@ -3,9 +3,10 @@ require("@nomiclabs/hardhat-waffle");
 //require("@nomiclabs/hardhat-ethers");
 require("dotenv").config();
 require("@nomiclabs/hardhat-etherscan");
-require("./tasks/block-number");
+uire("./tasks/block-number");
+require("solidity-coverage");
 
-const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
+const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL || "https";
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 module.exports = {
