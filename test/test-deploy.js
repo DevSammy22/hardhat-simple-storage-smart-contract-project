@@ -1,6 +1,6 @@
 const { ethers } = require("hardhat");
 const { expect, assert } = require("chai");
-const { inputToConfig } = require("@ethereum-waffle/compiler");
+//const { inputToConfig } = require("@ethereum-waffle/compiler");
 
 //describe("SimpleStorage", () => {})
 describe("SimpleStorage", function () {
